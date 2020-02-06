@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | My blog</title>
+  <title>DOM | My blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="My blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="DOM简介">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DOM">
+<meta property="og:url" content="http://yoursite.com/2020/02/06/DOM/index.html">
 <meta property="og:site_name" content="My blog">
+<meta property="og:description" content="DOM简介">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-02-06T07:17:53.514Z">
+<meta property="article:modified_time" content="2020-02-06T08:27:01.409Z">
 <meta property="article:author" content="Mr He">
 <meta name="twitter:card" content="summary">
   
@@ -152,130 +156,201 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-DOM" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      DOM
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/06/DOM/" class="archive-article-date">
+
+        
+        <a href="/2020/02/06/DOM/" class="archive-article-date">
   	<time datetime="2020-02-06T07:17:53.514Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-06</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/06/DOM/">DOM</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="DOM简介"><a href="#DOM简介" class="headerlink" title="DOM简介"></a>DOM简介</h1><a id="more"></a>
+<ul>
+<li>文档：一个页面就是一个文档，dom中使用document表示</li>
+<li>元素：页面中的所有标签都是元素，dom中使用element表示</li>
+<li>节点：网页中的所有内容都是节点(标签，属性，文本，注释等)，DOM中使用node表示<h3 id="DOM把上述内容都看作是对象"><a href="#DOM把上述内容都看作是对象" class="headerlink" title="DOM把上述内容都看作是对象"></a>DOM把上述内容都看作是对象</h3></li>
+</ul>
+<h2 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h2><p>在界面中获取元素的方法：</p>
+<ul>
+<li><p>根据ID获取   var =document.getElementById(“id”);</p>
+</li>
+<li><p>根据标签名获取   </p>
+<pre><code>使用getElementsByTagName()方法可以返回带有指定标签名的对象集合</code></pre><p>  还可以获取某个元素(父元素)内部所以指定标签名的子元素</p>
+<pre><code>elememt.getElementsByTagName(&apos;标签名&apos;);
+注意：父元素必须是单个对象(**必须指明是哪一个元素对象**)获取的时候不包括父元素自己</code></pre></li>
+<li><p>通过HTML5新增的方式获取</p>
+<pre><code>document.querySelector(&apos;选择器&apos;)； //根据指定选择器返回第一个元素对象,里面的选择器需要加符号  .box  #mav
+querySelectorAll()返回指定选择器所有对象集合</code></pre></li>
+<li><p>特殊元素获取</p>
+<pre><code>获取body元素   document.body
+获取heml元素   document.documentElement   //返回html元素对象</code></pre></li>
+</ul>
+<h2 id="事件基础"><a href="#事件基础" class="headerlink" title="事件基础"></a>事件基础</h2><ol>
+<li>事件概述<br>JavaScript使我们有能力创建动态页面，而事件是可以被JavaScript侦测到的行为<br>简单理解：触发—响应机制<br>例如：我们可以在用户点击某按钮产生一个事件，然后执行某操作<br>事件是有三部分组成：事件源  事件类型  事件处理程序  我们也称为事件三元素</li>
+</ol>
+<ul>
+<li>事件源  事件被触发对象  谁  按钮</li>
+<li>事件类型  如果触发  什么事件 比如鼠标点击(onclick)还是经过</li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/getmoney.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/06/DOM/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/04/localhost%E6%9C%AC%E7%AB%99%E7%9A%84%E5%BB%BA%E7%AB%8B/" class="archive-article-date">
-  	<time datetime="2020-02-04T09:05:19.135Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-04</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/04/localhost%E6%9C%AC%E7%AB%99%E7%9A%84%E5%BB%BA%E7%AB%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">localhost本站的建立</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/04/localhost%E6%9C%AC%E7%AB%99%E7%9A%84%E5%BB%BA%E7%AB%8B/">localhost本站的建立</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DOM简介"><span class="toc-number">1.</span> <span class="toc-text">DOM简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM把上述内容都看作是对象"><span class="toc-number">1.0.1.</span> <span class="toc-text">DOM把上述内容都看作是对象</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取元素"><span class="toc-number">1.1.</span> <span class="toc-text">获取元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件基础"><span class="toc-number">1.2.</span> <span class="toc-text">事件基础</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-02-02T07:28:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-02</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/02/hello-world/" class="archive-article-date">
-  	<time datetime="2020-02-02T05:22:05.852Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/02/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -298,8 +373,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
